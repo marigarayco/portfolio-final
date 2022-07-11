@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.oculto{
+    display: none;
+}
+
+// VARIABLES //
+@import 'vars';
+
+/* EXTENDS */
+@import 'extends';
+
+// MIXINS //
+@import 'mixins';
+
+/* ENCABEZADO */
+@import 'header';
+
+/* INDEX */
+@import 'index';
+
+/* TRABAJOS */
+@import 'trabajos';
+
+/* CONTACTO */
+@import 'contacto';
+
+/* SOBRE MI */
+@import 'sobre-mi';
+
+/* FOOTER */
+@import 'footer';
+
+
+/* RESPONSIVE */
+@import 'responsive-tablet';
+@import 'responsive-desktop';

@@ -1,0 +1,103 @@
+/* GRILLA TRABAJOS */
+#grilla-trabajos{
+    margin-top: 50px;
+    width: 100vw;
+    display: grid;
+    overflow: hidden;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(27, 30vh);
+    gap: 5px;
+    .grilla-item{
+        .item-contenedor{
+            @extend .centrar;
+            overflow: hidden;
+            height: 100%;
+            cursor: pointer;
+            img{
+                width: 100%;
+            }
+            video{
+                width: 100%;
+            }
+            .item-youtube{
+                overflow: hidden;
+                width: 100%;
+                height: 30vh;
+                @extend .centrar;
+                iframe{
+                    width: 100%;
+                    height: 200%;
+                }
+            }
+            .item-info{
+                background-color: rgba(0, 0, 0, 0.525);
+                position: absolute;
+                @extend .centrar;
+                flex-direction: column;
+                padding: 0px 30px 0px 30px;
+                width: 100%;
+                height: 30vh;
+                opacity: 0;
+                transition: 0.5s;
+                h4, p{
+                    color: white;
+                    text-align: center;
+                }
+            }
+            &:hover .item-info{
+                opacity: 100%;
+            }
+
+        }    
+    }
+}
+
+/* MODAL */
+
+.modal-reset{
+    width: 100vw;    
+    .modal-dialog{
+        display: flex;
+        justify-content: center;
+        align-items: center;        
+        width: 100vw;
+        margin-top: 50px;
+        .modal-content{
+            background: none;
+            border: none;
+            width: 80vw;
+            margin: 0;
+            padding: 0;
+            .modal-header{
+                border: none;
+            }
+            .modal-body{
+                width: 80vw;
+                height: fit-content;
+                .modal-carousel{
+                    .carousel-inner{
+                        .carousel-item{
+                            video{
+                                width: 80vw;
+                            }
+                            img{
+                                width: 80vw;
+                            }
+                        }
+                    }
+                }
+            }
+            .modal-footer{
+                display: block;
+                h3{
+                    color: white;
+                    font-weight: 700;
+                }
+                p{
+                    color: white;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,102 @@
+/* INDEX PORTADA */
+#portada{
+    .portada-contenedor{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: top;
+        .portada-foto{
+            position: fixed;
+            height: 100%;
+            z-index: -10;
+        }
+    }    
+}
+
+/* INDEX SERVICIOS */
+#servicios{
+    background: white;
+    .separador-frase{
+        background-color: white;
+        height: 200px;
+        width: 100vw;
+        padding: 0px 30px 0px 30px;
+        @extend .centrar;
+        position: sticky;
+        top: 0;
+        z-index: 8;
+        h1{
+            text-align: center;
+            font-weight: 900;
+            font-size: 3rem;
+            margin-top: 50px;
+        }
+    }
+    .seccion-servicios{
+        height: 70vh;
+        display: flex;
+        .servicios-imagen{
+            height: 70vh;
+            width: 60vw;
+            z-index: 4;
+            @extend .centrar;
+            overflow: hidden;
+            img{
+                height: 100%;
+            }
+            video{
+                height: 100%;
+                right: 0;
+            }
+        }
+        .titular-der{
+            @include titular;
+            justify-content:flex-end;
+            padding-right: 20px;
+        }
+        .titular-izq{
+            @include titular;
+            justify-content:flex-start;
+            padding-left: 20px;
+        }
+    }
+
+    /* MAPS */
+    $servicios: (
+    fotografia: $colorPrincipal,
+    audiovisual: $colorAudiovisual,
+    redes: $colorRedes,
+    retoque: $colorRetoque,
+    creativa: $colorCreativa,
+    fotoperiodismo: $colorFotoperiodismo,
+    personal: $colorPrincipal,
+    );
+
+    @each $nombre, $valor in $servicios{
+        .seccion-#{$nombre} {
+            .titular-#{$nombre} {
+                a {
+                    h2{
+                        color: $valor;
+                        border-top: solid 2px $valor;
+                        transition: 0.5s;
+                    }
+                }
+            }
+            &:hover{
+                .titular-#{$nombre} {
+                    background: $valor;
+                }
+            }
+        }
+    }
+
+    .seccion-servicios:hover{
+        a{
+            h2{
+                color: white;
+                border-top: solid 2px white;
+            }                                 
+        }
+    }
+}

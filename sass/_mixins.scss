@@ -1,0 +1,18 @@
+@mixin titular{
+    background: white;
+    height: 70vh;
+    width: 40vw;
+    z-index: 6;
+    display: flex;
+    align-items: flex-end;
+    transition: 0.5s;
+    a{
+        text-decoration: none;
+        h2{
+            font-size: 2.5rem;
+            font-weight: 800;
+            text-align: right;
+            padding: 20px 0px 30px 0px;
+        }
+    }
+}

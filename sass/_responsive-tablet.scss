@@ -1,0 +1,120 @@
+@media (min-width: $tablet){
+    /* RESPONSIVE TABLET - HEADER */
+    #header{
+        div{
+            #navbarNav{
+                justify-content: end;
+                align-items: flex-end;
+            }
+        }
+    }
+
+    /* RESPONSIVE TABLET - TRABAJOS GRILLA */
+    #grilla-trabajos{
+        grid-template-columns: 50% 50%;
+        grid-template-rows: repeat(11, 40vh);
+        justify-content: center;
+        align-items: center;
+        .grilla-item{
+            height:40vh;
+            width: 50vw;
+            .item-contenedor{
+                img{
+                    object-fit:cover;
+                    height: 100%;
+                }
+                video{
+                    object-fit:cover;
+                    height: 100%;
+                }
+                .item-youtube{
+                    width: 100%;
+                    height:40vh;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    iframe{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }                    
+                .item-info{
+                    object-fit:cover;
+                    height: 40vh;
+                    width: 50vw;
+                }
+            }
+        }        
+    }
+
+    /* RESPONSIVE TABLET - TRABAJOS MODAL */
+    .modal-reset{
+        width: 100vw;    
+        .modal-dialog{
+            display: flex;
+            justify-content: center;
+            align-items: center;        
+            width: 100vw;
+            margin-top: 50px;
+            .modal-content{
+                background: none;
+                border: none;
+                width: fit-content;
+                margin: 0;
+                padding: 0;
+                .modal-body{
+                    width: 80vw;
+                    .modal-carousel{
+                        .carousel-inner{
+                            .carousel-item{
+                                video{
+                                    width: 80vw;
+                                }
+                                img{
+                                    width: 80vw;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* RESPONSIVE TABLET - SOBRE MI */
+    .sobre-mi_contenedor{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        h1{
+            width: 100%;
+        }
+        p{
+            display: inline;
+            width: 48%;
+            text-align: justify;
+        }
+    }
+
+    /* RESPONSIVE TABLET - FOOTER */
+    #pie{
+        justify-content: center;
+        align-items: center;
+        .pie-izq{
+            width: 66%;
+            flex-flow: row;
+            justify-content: space-between;
+            .pie__numero{
+                width: 50%;
+            }
+            .pie__mail{
+                width: 50%;
+                text-align: center;
+            }
+        }
+        .pie-der{
+            width: 33%;
+            justify-content: flex-end;
+        }
+    }
+}

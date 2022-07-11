@@ -1,0 +1,116 @@
+@media (min-width: $desktop){
+    /* RESPONSIVE DESKTOP - INDEX */
+    #portada{
+        .portada-contenedor{
+            .portada-foto{
+                position: fixed;
+                width: 100%;
+                height: auto;        
+            }
+        }
+    }
+
+    #servicios{
+        .seccion-servicios{
+            height: fit-content;
+            .servicios-imagen{
+                height:fit-content;
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+                video{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            .titular{
+                height: auto;
+            }
+        }
+    }
+
+    /* RESPONSIVE DESKTOP - TRABAJOS GRILLA */
+        #grilla-trabajos{
+            grid-template-columns: 33% 33% 33%;
+            grid-template-rows: repeat(7, 50vh);
+            gap: 0;
+            .grilla-item{
+                width: 33vw;
+                height: 50vh;
+                .item-contenedor{
+                    .item-info{
+                        width: 33%;
+                        height: 50vh;                        
+                    }
+                    .item-youtube{
+                        width: 100%;
+                        height:50vh;
+                        iframe{
+                            width: 200%;
+                            height: 150%;
+                            overflow: hidden;
+                        }
+                    }
+                }
+            }
+        }
+
+    /* RESPONSIVE DESKTOP - SOBRE MI */
+    #sobre-mi{
+        height: 90vh;
+        display: flex;
+        flex-flow: row;
+        padding-bottom: 10px;
+        padding: 80px 50px 0px 50px;
+        img{
+            border: none;
+        }
+        .sobre-mi_contenedor{
+            display: flex;
+            flex-flow: column;
+            justify-content: flex-end;
+            margin-left: 50px;
+            h1{
+                font-weight: 900;
+            }
+            p{
+                width: 100%;
+            }
+        }
+    }
+
+    /* RESPONSIVE DESKTOP - TRABAJOS MODAL */
+    .modal-reset{
+        width: 100vw;
+        height: 100vh;    
+        .modal-dialog{
+            max-width: none;        
+            width: 100vw;
+            margin-top: 40px;
+            .modal-content{
+                width: 90vw;
+                height: 90vh;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-flow: row wrap;
+                .modal-header{
+                    border: none;
+                    width: 100%;
+                }
+                .modal-body{
+                    height: fit-content;
+                    width: 60vw;
+                }
+                .modal-footer{
+                    width: 20vw;
+                    border: none;
+                    padding-left: 10px;
+                    justify-content: end;
+                }
+            }
+        }
+    }
+
+}
